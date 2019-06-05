@@ -1,0 +1,10 @@
+{
+  "app": {
+    "host": "localhost",
+    "port": 1200
+  },
+  "logging": {
+    "loggingName": "app_logger",
+    "loggingFile": "app.log"
+  }
+}

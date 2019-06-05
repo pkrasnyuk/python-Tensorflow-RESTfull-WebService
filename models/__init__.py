@@ -1,0 +1,1 @@
+from models.degrees_model import Degrees
