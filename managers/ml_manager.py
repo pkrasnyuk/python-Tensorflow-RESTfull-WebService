@@ -1,8 +1,8 @@
 from app_core import logger
 from mLearning import DegreesModel
 
-class MlManager:
 
+class MlManager:
     @staticmethod
     def get_degrees(values, need_relearning):
         try:
