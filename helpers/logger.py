@@ -1,5 +1,6 @@
 import logging
-import helpers
+
+from helpers.common import is_blank
 
 
 class Logger:
@@ -11,14 +12,14 @@ class Logger:
         self.__logging_name = logging_name
         self.__logging_file = logging_file
 
-        if not (helpers.is_blank(self.__logging_name) or helpers.is_blank(self.__logging_file)):
+        if not (is_blank(self.__logging_name) or is_blank(self.__logging_file)):
 
             self.__logger = logging.getLogger(self.__logging_name)
             self.__logger.setLevel(logging.DEBUG)
 
             ch = logging.FileHandler(self.__logging_file)
             ch.setLevel(logging.DEBUG)
-            formatter = logging.Formatter('%(asctime)s - %(name)s - %(levelname)s - %(message)s')
+            formatter = logging.Formatter("%(asctime)s - %(name)s - %(levelname)s - %(message)s")
             ch.setFormatter(formatter)
             self.__logger.addHandler(ch)
 

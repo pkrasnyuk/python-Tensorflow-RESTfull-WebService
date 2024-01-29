@@ -11,8 +11,9 @@ class Configuration:
         self.__loggingFile = logging_file
 
     def __str__(self):
-        return " Host: {0}\n Port: {1}\n Logging Name: {2}\n Logging file: {3}" \
-            .format(self.__host, self.__port, self.__loggingName, self.__loggingFile)
+        return " Host: {0}\n Port: {1}\n Logging Name: {2}\n Logging file: {3}".format(
+            self.__host, self.__port, self.__loggingName, self.__loggingFile
+        )
 
     @property
     def host(self):

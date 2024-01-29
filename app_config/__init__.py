@@ -24,23 +24,21 @@ def __obj_creator(json_object):
 
     if json_object is not None:
 
-        if 'app' in json_object and 'host' in json_object['app']:
-            config_host = json_object['app']['host']
+        if "app" in json_object and "host" in json_object["app"]:
+            config_host = json_object["app"]["host"]
 
-        if 'app' in json_object and 'port' in json_object['app']:
-            config_port = int(json_object['app']['port'])
+        if "app" in json_object and "port" in json_object["app"]:
+            config_port = int(json_object["app"]["port"])
 
-        if 'logging' in json_object and 'loggingName' in json_object['logging']:
-            config_logging_name = json_object['logging']['loggingName']
+        if "logging" in json_object and "loggingName" in json_object["logging"]:
+            config_logging_name = json_object["logging"]["loggingName"]
 
-        if 'logging' in json_object and 'loggingFile' in json_object['logging']:
-            config_logging_file = json_object['logging']['loggingFile']
+        if "logging" in json_object and "loggingFile" in json_object["logging"]:
+            config_logging_file = json_object["logging"]["loggingFile"]
 
         return Configuration(
-            host=config_host,
-            port=config_port,
-            logging_name=config_logging_name,
-            logging_file=config_logging_file)
+            host=config_host, port=config_port, logging_name=config_logging_name, logging_file=config_logging_file
+        )
 
 
 def __main():
@@ -48,5 +46,5 @@ def __main():
     print(load_configuration(config_file_path))
 
 
-if __name__ == '__main__':
+if __name__ == "__main__":
     __main()
